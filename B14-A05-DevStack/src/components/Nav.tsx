@@ -2,7 +2,7 @@
 import Logo from "../assets/logo-text.png";
 export default function Nav() {
   return (
-    <div className="w-full h-auto">
+    <div className="w-full h-auto sticky top-0 z-50 shadow-md">
       <div className="flex justify-between mx-30 p-5">
         <img src={Logo} alt="logo-text.png" className="w-50 h-13"/>
         <div className="flex gap-10 items-center">
