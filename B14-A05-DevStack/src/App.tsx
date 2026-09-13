@@ -23,10 +23,7 @@ function App() {
 
       <FutterSection></FutterSection>
 
-      <ToastContainer
-        position="top-center"
-        aria-label="notifications"
-      ></ToastContainer>
+      <ToastContainer position="bottom-right" aria-label="notifications" ></ToastContainer>
     </>
   );
 }

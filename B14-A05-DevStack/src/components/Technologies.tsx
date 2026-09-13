@@ -1,5 +1,6 @@
 import { use, useState } from "react";
 import Technologi from "./Technologi";
+import { toast } from "react-toastify";
 // import App from "../App";
 
 export default function Technologies({ loadDataPromise }) {
@@ -20,9 +21,13 @@ export default function Technologies({ loadDataPromise }) {
 
   const removeFromStack = (id) => {
     setStack((prev) => prev.filter((t) => t.id !== id));
+    toast.info("Remove to stack");
   };
 
-  const removeAll = () => setStack([]);
+  const removeAll = () => {
+    setStack([]);
+    toast.info("Remove all to stack");
+  };
 
   return (
     <div className="mt-24 mx-35">

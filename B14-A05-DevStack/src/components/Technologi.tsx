@@ -14,7 +14,7 @@ export default function Technologi({
       return;
     } else {
       onAdd(technology);
-      toast.success("Wow so easy!");
+      toast.success("Add to stack");
     }
   };
 
