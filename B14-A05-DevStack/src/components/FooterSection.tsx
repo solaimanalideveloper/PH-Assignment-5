@@ -1,5 +1,5 @@
 import Footer from "../assets/logo-text.png";
-export default function FutterSection() {
+export default function FooterSection() {
   return (
     <div className="mt-24 mx-35">
       <div className="grid grid-cols-2 mb-30">
@@ -11,9 +11,9 @@ export default function FutterSection() {
             modern software.
           </p>
           <div className="flex gap-7 mt-8 text-[#475569]">
-            <a>GitHub</a>
-            <a>Twitter</a>
-            <a>LinkedIn</a>
+            <a className="cursor-pointer">GitHub</a>
+            <a className="cursor-pointer">Twitter</a>
+            <a className="cursor-pointer">LinkedIn</a>
           </div>
         </div>
         <div className="flex justify-between">

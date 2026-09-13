@@ -1,2 +1,14 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.linear-gradient {
+  background: linear-gradient(to right, #f97316, #db2777, #7c3aed);
+}
+.brand-gradient-text {
+  background: linear-gradient(to right, #f97316, #db2777, #7c3aed);
+  background-clip: text;
+  color: transparent;
+}
+
+/* bg-linear-to-r from-[#FF5722] via-[#E91E63] to-[#7C4DFF] */
+/* bg-linear-to-r from-orange-500 via-rose-500 to-pink-500 */

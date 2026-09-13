@@ -1,3 +1,4 @@
+// import index from "index.css"
 import Banner from "../assets/banner-stack.png";
 export default function HeroSection() {
   return (
@@ -6,7 +7,7 @@ export default function HeroSection() {
         <div>
           <h1 className="text-6xl w-2xl mt-15 font-bold">
             Build Your Ideal{" "}
-            <span className="bg-linear-to-r from-[#FF5722] via-[#E91E63] to-[#7C4DFF] bg-clip-text text-transparent block">
+            <span className=" brand-gradient-text bg-clip-text text-transparent block">
               Development Stack
             </span>
           </h1>
@@ -16,7 +17,7 @@ export default function HeroSection() {
             <br /> next project.
           </p>
           <div className="flex gap-5 mt-25">
-            <button className="bg-linear-to-r from-orange-500 via-rose-500 to-pink-500 text-white font-semibold px-6 py-3 rounded-2xl shadow-md hover:opacity-90 transition active:bg-black cursor-pointer">
+            <button className=" linear-gradient text-white font-semibold px-6 py-3 rounded-2xl shadow-md hover:opacity-90 transition active:bg-black cursor-pointer">
               Explore Technologies
             </button>
             <button className="border border-slate-200 text-slate-600 font-medium px-16 py-3 rounded-xl bg-white hover:bg-slate-50 transition active:bg-sky-100 active:text-black cursor-pointer">

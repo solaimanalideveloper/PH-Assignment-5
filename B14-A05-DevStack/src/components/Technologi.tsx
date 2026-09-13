@@ -103,7 +103,7 @@ export default function Technologi({
                 : "bg-gray-900 text-white hover:bg-black active:-bg-[#202020bf] cursor-pointer"
             } `}
           >
-            {isAdded ? "✓ Add to Stack" : "Add to Stack"}
+            {isAdded ? "✓ Added to Stack" : "Add to Stack"}
           </button>
         </div>
       </div>
