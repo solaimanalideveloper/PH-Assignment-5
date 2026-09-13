@@ -18,7 +18,7 @@ export default function Technologies({ loadDataPromise }) {
     });
   };
 
-  const removeFromStack = (id: string) => {
+  const removeFromStack = (id) => {
     setStack((prev) => prev.filter((t) => t.id !== id));
   };
 

@@ -2,7 +2,9 @@ import { Suspense } from "react";
 import HeroSection from "./components/HeroSection";
 import Nav from "./components/Nav";
 import Technologies from "./components/Technologies";
+import { ToastContainer } from "react-toastify";
 import FutterSection from "./components/FutterSection";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const loadDataPromise = async () => {
@@ -20,6 +22,11 @@ function App() {
       </Suspense>
 
       <FutterSection></FutterSection>
+
+      <ToastContainer
+        position="top-center"
+        aria-label="notifications"
+      ></ToastContainer>
     </>
   );
 }

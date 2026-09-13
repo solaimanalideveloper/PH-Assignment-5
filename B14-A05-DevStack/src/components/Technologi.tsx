@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 export default function Technologi({
   technology,
   onAdd,
@@ -8,14 +10,21 @@ export default function Technologi({
   isAdded;
 }) {
   const hendalAddToStack = () => {
-    onAdd(technology);
+    if (isAdded) {
+      return;
+    } else {
+      onAdd(technology);
+      toast.success("Wow so easy!");
+    }
   };
 
   return (
     // Card Section
     <div>
       <div>
-        <div className="w-full h-97.5 max-w-sm rounded-3xl border border-gray-200 bg-white p-7 shadow-sm">
+        <div
+          className={`w-full h-97.5 max-w-sm rounded-3xl border transition-colors p-7 shadow-sm ${isAdded ? "border-pink-700 bg-pink-50" : "border-gray-200 bg-white"}`}
+        >
           {/* Top row: icon + badge */}
           <div className="flex items-start justify-between">
             <img
@@ -55,16 +64,20 @@ export default function Technologi({
               {technology.badge}
             </span>
           </div>
+
           {/* Name */}
           <h2 className="mt-5 text-2xl font-bold text-gray-900">
             {technology.name}
           </h2>
+
           {/* Description */}
           <p className="mt-3 text-[15px] leading-relaxed text-gray-500">
             {technology.description}
           </p>
+
           {/* Divider */}
           <div className="mt-5 border-t border-gray-100" />
+
           {/* Meta row: category, difficulty, rating */}
           <div className="mt-5 flex items-start justify-between">
             <span className="rounded-lg bg-gray-100 px-3 py-1.5 text-sm text-gray-700">
@@ -83,7 +96,12 @@ export default function Technologi({
           <button
             onClick={hendalAddToStack}
             disabled={isAdded}
-            className={`mt-6 w-full rounded-2xl bg-gray-900 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-black active:bg-[#202020bf] cursor-pointer ${isAdded ? "opacity-50 cursor-not-allowed" : ""}`}
+            className={`mt-6 w-full rounded-2xl py-3.5 text-[15px] font-bold transition-colors 
+            ${
+              isAdded
+                ? "bg-pink-50 text-pink-600 border border-pink-200 cursor-not-allowed"
+                : "bg-gray-900 text-white hover:bg-black active:-bg-[#202020bf] cursor-pointer"
+            } `}
           >
             {isAdded ? "✓ Add to Stack" : "Add to Stack"}
           </button>
