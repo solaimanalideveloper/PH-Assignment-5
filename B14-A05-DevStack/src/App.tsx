@@ -3,7 +3,7 @@ import HeroSection from "./components/HeroSection";
 import Nav from "./components/Nav";
 import Technologies from "./components/Technologies";
 import { ToastContainer } from "react-toastify";
-import FutterSection from "./components/FooterSection";
+import FooterSection from "./components/FooterSection";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -21,9 +21,12 @@ function App() {
         <Technologies loadDataPromise={loadDataPromise()}></Technologies>
       </Suspense>
 
-      <FutterSection></FutterSection>
+      <FooterSection></FooterSection>
 
-      <ToastContainer position="bottom-right" aria-label="notifications" ></ToastContainer>
+      <ToastContainer
+        position="bottom-right"
+        aria-label="notifications"
+      ></ToastContainer>
     </>
   );
 }
